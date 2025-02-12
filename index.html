@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Maya!</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ab0808;
+            color: #fff;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-family: 'Georgia', serif;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            padding: 80px 0;
+            text-align: center;
+            background-image: url("Untitled design.png");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            background-color: #fff;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Slideshow */
+        /* .slideshow-container {
+            position: relative;
+            width: 100%;
+            max-width: 4000px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        } */
+        .slideshow {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            background-color: #ffebee;
+            /* background-image: url(123.webp); */
+        }
+
+        .slides {
+            display: flex;
+            width: 200%;
+            animation: slideShow 20s linear infinite;
+        }
+
+        .slides img {
+            width: 10%;
+            height: 500px;
+            /* border-radius: 10px; */
+            object-fit: cover;
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            max-width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+    }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+        .close:hover {
+         color: red;
+    }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+    }
+
+
+
+        /* Countdown Timer */
+        #countdown-timer {
+            font-size: 2.5em;
+            color: #d32f2f;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #b71c1c;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes slideShow {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); } /* Moves to the last image */
+}
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header img {
+                width: 180px;
+            }
+
+            .photo-gallery img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Happy Birthday, Maya!</h1>
+    </header>
+
+    <!-- Slideshow Section -->
+    <section>
+        <!-- <h2>Memories</h2> -->
+        <div class="slideshow">
+            <div class="slides">
+            <img src="1.jpg" alt="Memory 1">
+            <img src="2.jpg" alt="Memory 2">
+            <img src="3.jpg" alt="Memory 3">
+            <img src="4.jpg" alt="Memory 4">
+            <img src="15.png" alt="Memory 1">
+            <img src="6.jpg" alt="Memory 2">
+            <img src="7.jpg" alt="Memory 3">
+            <img src="20.png" alt="Memory 4">
+            <img src="19.png" alt="Memory 1">
+            <img src="14.jpg" alt="Memory 2">
+
+            <img src="11.jpg" alt="Memory 1">
+            <img src="13.jpg" alt="Memory 2">
+            <img src="23.jpg" alt="Memory 3">
+            <img src="21.png" alt="Memory 4">
+            <img src="22.png" alt="Memory 1">
+            <img src="16.png" alt="Memory 2">
+            <img src="17.png" alt="Memory 3">
+            <img src="10.jpg" alt="Memory 4">
+            <img src="19.png" alt="Memory 1">
+            <img src="20.png" alt="Memory 2">
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <p><strong>To My Love, Maya</strong></p>
+
+<p>Maya, my love, my heart, my everything—there are no words in this world that can truly capture how much I love you, but today, on your birthday, I want to try.
+
+From the moment you walked into my life, everything changed. You brought light into my world, filling my days with joy, my nights with dreams, and my heart with a love so deep that it feels endless. Loving you is not just something I do—it is who I am. Every beat of my heart, every thought in my mind, and every wish in my soul revolves around you.
+
+I love the way you smile, the way your eyes light up when you talk about something you're passionate about. I love the sound of your laughter—it is the most beautiful melody I have ever heard. Your voice has the power to soothe me, to bring me peace even in the stormiest moments of my life. Just hearing you say my name makes my heart race, reminding me of how lucky I am to have you.
+
+You are my safe place, my home, my greatest adventure. Every moment with you is a blessing, a memory I want to cherish forever. I love the way you challenge me, inspire me, and make me want to be a better person. You see the best in me even when I struggle to see it myself, and for that, I am forever grateful.
+
+I cherish every little thing about you—the way you hold my hand, the way you lean on my shoulder, the way you look at me like I’m the only person in the world. I could spend a lifetime just staring into your eyes, getting lost in their depth, and still not have enough time to love you the way you deserve to be loved.
+
+Maya, you are my heart’s greatest treasure, my soul’s perfect match. I want to spend my days making you smile, making you happy, and showing you just how deeply and unconditionally I love you. You are the love of my life, my forever, my always.
+
+Every day with you is a new reason to fall in love all over again. The way you care, the way you support me, and the way you understand me even when I struggle to find the right words—it all makes me love you even more. You are my best friend, my confidant, and the most beautiful soul I have ever known.
+
+I remember all the little moments we've shared—the late-night conversations, the laughter, the silent understanding in our gazes. Each of these moments is etched into my heart, shaping our story into something truly extraordinary. Every glance, every touch, every whisper of your voice is a love story in itself.
+
+I love how you dream fearlessly, how you chase your passions with all your heart. You inspire me to be better, to work harder, to see the world in colors I never knew existed. You are my muse, my motivation, the force that keeps me moving forward even when times get tough.
+
+ words will ever be enough to describe how deeply I love you. If love could be measured in time, I would give you eternity. If love could be held, I would place the universe in your hands. You deserve the best of everything, and I promise to spend my life giving you all that I can.
+
+On this special day, I want to remind you of how much you mean to me. You are my greatest gift, my most precious blessing. I wish for your happiness, your dreams to come true, and for our love to grow even stronger with each passing day.
+
+Happy Birthday, my love. You are my heart, my soul, my forever.</p>
+
+<p>Forever yours,<br><strong>Jerush</strong></p>
+
+
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Memory</h2>
+        <div class="photo-gallery">
+        <img src="24.jpg" alt="Memory 1" onclick="openImage(this)">
+        <img src="25.jpg" alt="Memory 2" onclick="openImage(this)">
+        <img src="26.jpg" alt="Memory 3" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="28.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="29.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="30.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="40.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="41.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="42.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="43.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="44.jpg" alt="Memory 4" onclick="openImage(this)">
+        <!-- <img src="45.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)">
+        <img src="27.jpg" alt="Memory 4" onclick="openImage(this)"> -->
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <!-- Countdown Section -->
+    <section id="countdown">
+        <h2>Happy Birthday</h2>
+        <div id="countdown-timer"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ by Jerush</p>
+    </footer>
+
+    <!-- JavaScript Countdown Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let countdownDate = new Date("Feb 13, 2025 00:00:00").getTime();
+
+            let x = setInterval(function () {
+                let now = new Date().getTime();
+                let distance = countdownDate - now;
+
+                let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown-timer").innerHTML =
+                    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown-timer").innerHTML = "Happy Birthday, Maya!";
+                }
+            }, 1000);
+        });
+    </script>
+    <script>
+        function openImage(imgElement) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("fullImage");
+    
+            modal.style.display = "block";  // Show the modal
+            modalImg.src = imgElement.src;  // Set clicked image
+        }
+    
+        function closeImage() {
+            document.getElementById("imageModal").style.display = "none"; // Hide modal
+        }
+    </script>
+    
+
+</body>
+</html>
